@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteo de Inventario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conteo de Inventario</h1>
+        <form id="conteoForm">
+            <div class="form-group">
+                <label for="codigoBarras">Código de Barras:</label>
+                <input type="text" class="form-control" id="codigoBarras" required readonly oninput="guardarConteo()">
+            </div>
+            <div class="form-group">
+                <label for="cantidadContada">Cantidad Contada:</label>
+                <input type="number" class="form-control" id="cantidadContada" required>
+            </div>
+            <!-- <button type="button" class="btn btn-primary" onclick="guardarConteo()">Guardar</button> -->
+        </form>
+
+        <h2>Resultados de los Conteos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código de Barras</th>
+                    <th>Cantidad Inicial</th>
+                    <th>Cantidad Final</th>
+                </tr>
+            </thead>
+            <tbody id="resultadosConteo">
+                <!-- Aquí se mostrarán los resultados de los conteos -->
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-success" onclick="consolidarConteos()">Consolidar</button>
+    </div>
+
+    <!-- Enlace a jQuery (necesario para Bootstrap y AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Enlace a Bootstrap JS  -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Enlace a tu archivo de scripts JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
